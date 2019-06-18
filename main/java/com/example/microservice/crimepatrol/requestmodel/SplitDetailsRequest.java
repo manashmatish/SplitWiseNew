@@ -31,16 +31,16 @@ public class SplitDetailsRequest {
     }
     
     public static class Split{
-        private String userUuid;
+        private String userName;
         
         private Long amount;
 
-        public String getUserUuid() {
-            return userUuid;
+        public String getUserName() {
+            return userName;
         }
 
-        public void setUserUuid(String userUuid) {
-            this.userUuid = userUuid;
+        public void setUserName(String userName) {
+            this.userName = userName;
         }
 
         public Long getAmount() {
