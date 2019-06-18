@@ -51,7 +51,7 @@ public class SplitDetailsController {
     @PostMapping(value = "/splitdetails")
     public ResponseEntity<Object> createSplitDetails(@RequestBody SplitDetailsRequest splitDetailsRequest) {
         List<Split> userSplit = splitDetailsRequest.getUserSplit();
-        userSplit.stream().forEach(split -> createEntity(splitDetailsRequest.getExpenditureName(), split.getUserUuid(),split.getAmount()));
+        userSplit.stream().forEach(split -> createEntity(splitDetailsRequest.getExpenditureName(), split.getUserName(),split.getAmount()));
         return new ResponseEntity<>("Split Details is created successfully", HttpStatus.CREATED);
     }
     
